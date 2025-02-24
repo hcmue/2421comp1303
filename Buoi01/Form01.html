@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="xulyDangNhap.php" method="post" enctype="multipart/form-data">
+        <h2 style="color: red; text-align: center;">ĐĂNG NHẬP</h2>
+        <div>
+            <label for="username">Tên đăng nhập:</label>
+            <input type="text" name="username" id="username">
+        </div>
+        <div>
+            <label for="password">Mật khẩu:</label>
+            <input type="password" name="password" id="password">
+        </div>
+        <div>
+            Loại nhân viên:
+            <input type="radio" name="loaiNV" value="quanly" id="quanly">Quản lý
+            <input type="radio" name="loaiNV" value="nhanvien" id="nhanvien">Nhân viên
+            <input type="radio" name="loaiNV" checked value="khachhang" id="khachhang">Khách hàng
+        </div>
+        <div>
+            Sở thích:
+            <input type="checkbox" name="sothich" value="docSach" id="docSach">Đọc sách
+            <input type="checkbox" name="sothich" value="xemPhim" id="xemPhim">Xem phim
+            <input type="checkbox" name="sothich" value="ngheNhac" id="ngheNhac">Nghe nhạc
+        </div>
+        <div>
+            <label for="queQuan">Quê quán:</label>
+            <select name="queQuan">
+                <option value="DN">Đà Nẵng</option>
+                <option value="HN">Hà Nội</option>
+                <option value="HCM">Hồ Chí Minh</option>
+            </select>
+        </div>
+        <div>
+            <label for="ghiChu">Ghi chú:</label>
+            <textarea name="ghiChu" id="ghiChu" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+            <label for="hinh">Hình ảnh:</label>
+            <input type="file" name="hinh" id="hinh">
+        </div>
+        <div>
+            <button type="submit">Đăng nhập</button>
+            <button type="reset">Nhập lại</button>
+        </div>
+    </form>
+</body>
+
+</html>
