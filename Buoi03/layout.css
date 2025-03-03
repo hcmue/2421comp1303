@@ -1,0 +1,7 @@
+.hh-header{position: relative; height: 180px;}
+.hh-logo{position: absolute;  right: 0; top: 0;}
+.hh-title{position: absolute; left: 10px; top:10px; text-decoration: underline;}
+.hh-slogan{position: absolute; left: 10px; top: 60px;}
+.list-group-item > a {text-decoration: none; color: blue;}
+.list-group-item>a:hover{color: red; font-weight: bolder;}
+.hh-box{width: 200px; display: inline-block;}
