@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bàn cờ CARO</title>
+    <style>
+        td {
+            width: 50px;
+            height: 50px;
+            border: 1px dotted blue;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <button type="button" id="btnShow">Show</button>
+    <button type="button" id="btnHide">Hide</button>
+    <button type="button" id="btnToggle">Toggle</button>
+    <table id="tblBanCo">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btnShow").click(function () {
+                $("#tblBanCo").show(1000);
+            });
+            $("#btnHide").click(function () {
+                $("#tblBanCo").hide(1000);
+            });
+            $("#btnToggle").click(function () {
+                $("#tblBanCo").toggle(1000);
+            });
+
+            let giaTri = "X";
+            $("td").click(function () {
+                if ($(this).html() != "") return;
+                $(this).html(giaTri);
+                giaTri = giaTri == "X" ? "O" : "X";
+            });
+        });
+    </script>
+</body>
+
+</html>
