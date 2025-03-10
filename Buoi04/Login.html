@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="login.php" method="post">
+        Username:
+        <input type="text" name="username" id="username" placeholder="Username">
+        <br>
+        Password:
+        <input type="password" name="password" id="password" placeholder="Password">
+        <br>
+        <button type="button" id="btnLogin">Login</button>
+        <div id="result"></div>
+    </form>
+    <style>
+        .loi {
+            color: white;
+            background-color: red;
+        }
+    </style>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btnLogin").click(function () {
+                let user = $("#username");
+                let pass = $("#password");
+                if ($(this).html() == "Logout") {
+                    user.show(); user.val("");
+                    pass.show(); pass.val("");
+                    $("#result").html("");
+                    $("span").remove();
+                    $(this).html("Login");
+                    return;
+                }
+                if (user.val().trim() == "") {
+                    user.focus(); user.addClass("loi");
+                    return;
+                } else {
+                    user.removeClass("loi");
+                }
+                if (pass.val().trim() == "") {
+                    pass.focus(); pass.addClass("loi");
+                    return;
+                } else {
+                    pass.removeClass("loi");
+                }
+
+                if (user.val().trim().length > 4 && pass.val().trim().length > 4) {
+                    $("#result").html("Login successfully");
+                    user.hide();
+                    pass.hide();
+                    $("<span>" + user.val() + "</span>").insertAfter(user);
+                    $("<span>" + pass.val() + "</span>").insertAfter(pass);
+                    $(this).html("Logout");
+                } else {
+                    $("#result").html("Login failed");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
